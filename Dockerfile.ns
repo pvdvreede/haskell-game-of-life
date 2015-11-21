@@ -1,0 +1,6 @@
+FROM haskell:latest
+RUN cabal update
+RUN cabal install --jobs=2 cabal-install
+COPY *.cabal /app/
+WORKDIR /app
+RUN cabal install --dependencies-only --enable-tests --jobs=2

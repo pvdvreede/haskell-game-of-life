@@ -1,0 +1,6 @@
+---
+app:
+  build: .
+  dockerfile: Dockerfile.ns
+  volumes:
+    - ".:/app"
